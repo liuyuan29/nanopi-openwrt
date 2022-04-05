@@ -30,8 +30,8 @@ merge_feed nas "https://github.com/linkease/nas-packages;master"
 merge_feed nas_luci "https://github.com/linkease/nas-packages-luci;main"
 merge_feed helloworld "https://github.com/fw876/helloworld;master"
 merge_package https://github.com/klever1988/helloworld/branches/lean/luci-app-ssr-plus
-merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
-#merge_package https://github.com/klever1988/openwrt-mos/trunk/luci-app-mosdns
+#merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
+merge_package https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns
 merge_package https://github.com/project-lede/luci-app-godproxy
 merge_package https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 merge_package https://github.com/kuoruan/openwrt-frp frp
@@ -44,7 +44,7 @@ merge_package https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 merge_package https://github.com/NateLol/luci-app-oled
 merge_package https://github.com/rufengsuixing/luci-app-adguardhome
 merge_package "-b lede https://github.com/pymumu/luci-app-smartdns"
-merge_package "-b hello https://github.com/DHDAXCW/openwrt-passwall"
+merge_package https://github.com/WYC-2020/openwrt-passwall
 drop_package luci-app-cd8021x
 drop_package luci-app-cifs
 drop_package verysync
