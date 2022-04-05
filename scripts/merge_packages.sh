@@ -1,29 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@liuyuan29 
-klever1988
-/
-nanopi-openwrt
-Public
-Code
-Issues
-Pull requests
-Actions
-Security
-Insights
-nanopi-openwrt/scripts/merge_packages.sh
-@klever1988
-klever1988 Package: add helloworld
-Latest commit e0a6e03 5 hours ago
- History
- 1 contributor
-57 lines (55 sloc)  2.7 KB
-   
 function merge_package(){
     pn=`echo $1 | rev | cut -d'/' -f 1 | rev`
     find package/ -follow -name $pn -not -path "package/custom/*" | xargs -rt rm -r
@@ -81,16 +55,3 @@ drop_package luci-app-cd8021x
 drop_package luci-app-cifs
 drop_package verysync
 drop_package luci-app-verysync
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
