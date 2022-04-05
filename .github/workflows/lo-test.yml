@@ -130,6 +130,7 @@ jobs:
           cd lede
           cp -rf $(find ./bin/targets/ -type f -name "*.buildinfo" -o -name "*.manifest") ../artifact/buildinfo/
           cp -rf .config ../artifact/buildinfo/
+          [ -e files ] && mv files ../artifact/buildinfo/files
           echo "strDate=$(TZ=UTC-8 date +%Y-%m-%d)" >> $GITHUB_ENV
           echo "strDevice=$(echo $DEVICE | awk '{print toupper($0)}')" >> $GITHUB_ENV
           rm -rf bin tmp
