@@ -45,6 +45,7 @@ merge_package https://github.com/NateLol/luci-app-oled
 merge_package https://github.com/rufengsuixing/luci-app-adguardhome
 merge_package "-b lede https://github.com/pymumu/luci-app-smartdns"
 merge_package https://github.com/WYC-2020/openwrt-passwall
+merge_package https://github.com/WYC-2020/openwrt-passwall/luci-app-passwall
 drop_package luci-app-cd8021x
 drop_package luci-app-cifs
 drop_package verysync
