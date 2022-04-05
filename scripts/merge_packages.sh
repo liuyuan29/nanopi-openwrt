@@ -1,3 +1,29 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@liuyuan29 
+klever1988
+/
+nanopi-openwrt
+Public
+Code
+Issues
+Pull requests
+Actions
+Security
+Insights
+nanopi-openwrt/scripts/merge_packages.sh
+@klever1988
+klever1988 Package: add helloworld
+Latest commit e0a6e03 5 hours ago
+ History
+ 1 contributor
+57 lines (55 sloc)  2.7 KB
+   
 function merge_package(){
     pn=`echo $1 | rev | cut -d'/' -f 1 | rev`
     find package/ -follow -name $pn -not -path "package/custom/*" | xargs -rt rm -r
@@ -30,8 +56,8 @@ merge_feed nas "https://github.com/linkease/nas-packages;master"
 merge_feed nas_luci "https://github.com/linkease/nas-packages-luci;main"
 merge_feed helloworld "https://github.com/fw876/helloworld;master"
 merge_package https://github.com/klever1988/helloworld/branches/lean/luci-app-ssr-plus
-#merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
-merge_package https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns
+merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
+#merge_package https://github.com/klever1988/openwrt-mos/trunk/luci-app-mosdns
 merge_package https://github.com/project-lede/luci-app-godproxy
 merge_package https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 merge_package https://github.com/kuoruan/openwrt-frp frp
@@ -42,11 +68,29 @@ merge_package https://github.com/jerrykuku/luci-app-jd-dailybonus
 merge_package "-b 18.06 https://github.com/jerrykuku/luci-theme-argon"
 merge_package https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 merge_package https://github.com/NateLol/luci-app-oled
-merge_package https://github.com/rufengsuixing/luci-app-adguardhome
 merge_package "-b lede https://github.com/pymumu/luci-app-smartdns"
-merge_package https://github.com/WYC-2020/openwrt-passwall
-merge_package https://github.com/WYC-2020/openwrt-passwall/luci-app-passwall
+merge_package "-b luci https://github.com/xiaorouji/openwrt-passwall"
+merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/brook
+merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
+merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria
+merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
+merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
+merge_package https://github.com/jerrykuku/lua-maxminddb
+merge_package https://github.com/jerrykuku/luci-app-vssr
 drop_package luci-app-cd8021x
 drop_package luci-app-cifs
 drop_package verysync
 drop_package luci-app-verysync
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
