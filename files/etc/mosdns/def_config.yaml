@@ -59,9 +59,9 @@ plugin:
     type: fast_forward
     args:
       upstream:
-        - addr: '223.5.5.5'
-        - addr: '119.29.29.29'
-
+        - addr: ${{ ./dns.sh 0 }}
+        - addr: ${{ ./dns.sh 1 }}
+        
   - tag: query_is_whitelist_domain
     type: query_matcher
     args:
