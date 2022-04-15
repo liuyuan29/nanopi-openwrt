@@ -33,7 +33,6 @@ merge_feed helloworld "https://github.com/fw876/helloworld;master"
 #merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
 #merge_package https://github.com/klever1988/openwrt-mos/trunk/luci-app-mosdns
 merge_package https://github.com/kenzok8/jell/trunk/luci-app-adguardhome
-merge_package https://github.com/kenzok8/jell/trunk/mosdns
 merge_package https://github.com/kenzok8/jell/trunk/luci-app-mosdns
 #merge_package https://github.com/sbwml/luci-app-mosdns
 #merge_package https://github.com/rufengsuixing/luci-app-adguardhome
