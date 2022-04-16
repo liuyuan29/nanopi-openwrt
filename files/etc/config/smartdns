@@ -23,7 +23,7 @@ config smartdns
 	option redirect 'none'
 	option enabled '0'
 	option dualstack_ip_selection '0'
-	option seconddns_enabled '1'
+	option seconddns_enabled '0'
 	option tcp_server '0'
 	list old_redirect 'none'
 	list old_port '6053'
