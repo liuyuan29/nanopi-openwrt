@@ -10,7 +10,6 @@ sed -i "/\/etc\/coremark\.sh/d" `find package/ -follow -type f -path '*/coremark
 sed -i 's/192.168.1.1/192.168.123.253/' package/base-files/files/bin/config_generate
 sed -i 's/=1/=0/g' package/kernel/linux/files/sysctl-br-netfilter.conf
 
-sed -i '/DEPENDS/ s/$/ +libcap-bin/' `find package/ -follow -type f -path '*/luci-app-openclash/Makefile'`
 sed -i '/DEPENDS+/ s/$/ +wsdd2/' `find package/ -follow -type f -path '*/ksmbd-tools/Makefile'`
 sed -i '/DEPENDS/ s/$/ +frpc/' `find package/ -follow -type f -path '*/luci-app-frpc/Makefile'`
 
@@ -82,7 +81,10 @@ sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase="/luci-static/argon"' 
 sed -i '/182.140.223.146/d;/\.cn\//d;/tencent/d' scripts/download.pl
 
 # add r1s support to Lean's repo
+if [ $DEVICE == 'r1s' ]; then
 cd ~ && git clone -b openwrt-21.02 https://github.com/immortalwrt/immortalwrt && cd immortalwrt
 git log --grep r1s -i | grep '^commit ' | head -n -2 | cut -d' ' -f2 | tac | xargs git show | sed '0,/UENV/s//ATF/' > r1s.diff
 git show 124116564e8a6081e79cb2e87b0d87b2af99c583 >> r1s.diff
-cd ~/lede && chmod +x target/linux/sunxi/base-files/etc/board.d/* && git apply ~/immortalwrt/r1s.diff 
+cd ~/lede && chmod +x target/linux/sunxi/base-files/etc/board.d/* && git apply ~/immortalwrt/r1s.diff
+wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/sunxi/cortexa53/config-5.4 -O target/linux/sunxi/cortexa53/config-5.4
+fi
