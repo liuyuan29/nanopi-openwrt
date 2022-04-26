@@ -14,7 +14,7 @@ config global
 	option loglevel 'warning'
 	option trojan_loglevel '2'
 	option dns_mode 'custom'
-	option custom_dns '127.0.0.1#7913'
+	option custom_dns '127.0.0.1#7053'
 
 config global_haproxy
 	option balancing_enable '0'
