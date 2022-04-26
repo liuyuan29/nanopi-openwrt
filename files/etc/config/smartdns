@@ -11,7 +11,7 @@ config smartdns
 	option ipv6_server '0'
 	option serve_expired '1'
 	option rr_ttl_min '300'
-	option seconddns_port '7913'
+	option seconddns_port '7053'
 	option seconddns_enabled '1'
 	option seconddns_no_rule_nameserver '1'
 	option seconddns_no_rule_addr '0'
