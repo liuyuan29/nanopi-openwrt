@@ -53,6 +53,7 @@ merge_package "-b packages https://github.com/xiaorouji/openwrt-passwall"
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
+#merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/dns2tcp
 merge_package https://github.com/jerrykuku/lua-maxminddb
 merge_package https://github.com/jerrykuku/luci-app-vssr
 merge_package https://github.com/kongfl888/luci-app-adguardhome
