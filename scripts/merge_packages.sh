@@ -32,7 +32,7 @@ merge_feed helloworld "https://github.com/fw876/helloworld;master"
 #merge_package https://github.com/klever1988/helloworld/branches/lean/luci-app-ssr-plus
 #merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
 #merge_package https://github.com/klever1988/openwrt-mos/trunk/mosdns
-merge_package https://github.com/immortalwrt/packages/trunk/master/net/mosdns
+merge_package https://github.com/sbwml/luci-app-mosdns
 #merge_package "-b master https://github.com/sbwml/luci-app-mosdns"
 merge_package https://github.com/project-lede/luci-app-godproxy
 merge_package https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
